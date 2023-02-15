@@ -1,0 +1,83 @@
+QFrame#fondo {
+    background: #05182a;
+    border-radius: 14px;
+}
+
+QPushButton#btn_cerrar {
+    background: rgb(172, 0, 0);
+    border-radius: 10px;
+}
+
+QPushButton#btn_cerrar:hover {
+    background: rgb(255, 0, 0);
+    
+}
+
+QPushButton#btn_minimizar {
+    background: rgb(180, 180, 0);
+    border-radius: 10px;
+}
+
+QPushButton#btn_minimizar:hover {
+    background: rgb(255, 255, 0);
+}
+
+QPushButton#btn_maximizar {
+    background: rgb(0, 57, 172);
+    border-radius: 10px;
+}
+
+QPushButton#btn_maximizar:hover {
+    background: rgb(0, 170, 255);
+}
+
+QFrame#fr_borde_top {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 93, 255, 255), stop:1 rgba(0, 233, 255, 255));
+    border-radius: 10px;
+}
+
+QFrame#fr_borde_right {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 233, 255, 255), stop:1 rgba(0, 255, 72, 255));
+    border-radius: 10px;
+}
+
+QFrame#fr_borde_bottom{
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(122, 0, 255, 255), stop:0.556818 rgba(0, 255, 244, 255), stop:1 rgba(0, 255, 72, 255));
+    border-radius: 10px;
+}
+
+QFrame#fr_borde_left {
+    background-color: qlineargradient(spread:pad, x1:1, y1:0.965909, x2:1, y2:0, stop:0 rgba(122, 0, 255, 255), stop:0.494318 rgba(0, 77, 188, 255), stop:1 rgba(0, 93, 255, 255));
+    border-radius: 10px;
+}
+
+QFrame#fr_buttons {
+    background-color: #05182a;
+    border-radius: 30px;
+    border: 5px solid #223048;
+}
+
+QLabel#lbl_titulo{
+    font: 30px arial;
+    border: 6px solid #223048;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: #3b5d9b;
+}
+
+QLabel#lbl_name{
+    background-color: #05182a;
+    font: 75 italic bold 20pt Arial;
+    border-top-right-radius: 30px;
+    color: #a5b3ff;
+}
+
+QLabel#lbl_name2 {
+    background-color: #05182a;
+    font: 75 italic bold 14pt Arial;
+	border: 2px solid cyan;
+    border-radius: 20px;
+    color: #a5b3ff;
+}
+
+/** Author: Francisco Velez */
