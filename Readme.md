@@ -1,30 +1,37 @@
 # PyQt5-Camara
-proyecto #4 con pyqt5. Camara.
+Project #3 with Python - PyQt5. Uses the camera resource.
 
-# Atajos de Teclado
+Uses the camera resource and contains animations,
+full screen camera, mini screen camera,
+the previous ones with keyboard shortcuts.
 
-## Atajos de los Visores
+You can also move window with cursor and
+move window with keyboard shortcuts,
+among others and more improvements.
 
-* Ctrl + 1 = Run/stop animacion
-* Ctrl + 0 = finaliza la animacion
+## Viewer Shortcuts
 
-* Ctrl + A = ??
+* Ctrl + 1 = Run/Stop animation.
+* Ctrl + 0 = End the animation.
 
-* Ctrl + Q = Central la ventana
+* Ctrl + Q = Move window to top right corner.
 
-* Ctrl + C = Cerrar la ventana
-* Ctrl + M = Minimizar ventana
+* Ctrl + C = Close the window.
+* Ctrl + M = minimize window.
 
-## Atajos de los mini Visores
+* Ctrl + A = Move window 10px to the Right.
+* Ctrl + D = Move window 10px to the Left.
+* Ctrl + W = Move window 10px Up.
+* Ctrl + S = Move window 10px Down.
 
-* Ctrl + A = Mover ventana 10px a la Derecha
-* Ctrl + D = Mover ventana 10px a la Izquierda
-* Ctrl + W = Mover ventana 10px Arriba
-* Ctrl + S = Mover ventana 10px Abajo
+**Image 1**
 
-* Ctrl + R = Aumentar 10px mas para mover una ventana
-             Hasta 80px como maximo
+![Image1](./Image1.png)
 
-* Ctrl + L = Restaurar los 10px para mover la ventana
+**Image 2**
 
-* Ctrl + M = Minimizar ventana
+![Image2](./Image2.png)
+
+**Best regard !!!**
+
+<cite>Author: Francisco Velez</cite>
