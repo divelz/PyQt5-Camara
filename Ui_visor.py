@@ -182,8 +182,6 @@ class Ui_Form(object):
         self.camara.start()
         self.paginaVisor.update()
 
-
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -192,3 +190,5 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())
+
+#* Author: Francisco Velez

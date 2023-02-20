@@ -1,3 +1,6 @@
+# PyQt5-Camara
+proyecto #4 con pyqt5. Camara.
+
 # Atajos de Teclado
 
 ## Atajos de los Visores

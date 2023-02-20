@@ -1,0 +1,137 @@
+QFrame#fondo{
+    background: #05182a;
+    border: 6px solid #223048;
+    border-radius: 30px;
+}
+
+QPushButton#btn_cerrar{
+    background: #ac0003;
+    border-radius: 10px;
+}
+
+QPushButton#btn_cerrar:hover{
+    background: #ff0008;
+    color: black;
+}
+
+QPushButton#btn_minimizar{
+    background: #666666;
+    border-radius: 10px;
+}
+
+QPushButton#btn_minimizar:hover{
+    background: #a8a8a8;
+}
+
+QLabel#lbl_titulo {
+    font: 30px arial;
+    border: 6px solid #223048;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color:rgb(85, 170, 255);
+}
+
+QRadioButton#rdb_textVideo1, QRadioButton#rdb_textVideo2 {
+    font: italic 14pt Arial;
+    color: rgb(170, 255, 255);
+}
+
+QRadioButton::indicator {
+    border: 3px solid rgb(52, 59, 72);
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    background: rgb(44, 49, 60);
+}
+
+QRadioButton::indicator:hover {
+    border: 3px solid rgb(58, 66, 81);
+}
+
+QRadioButton::indicator:checked {
+    background: 3px solid rgb(94, 106, 130);
+    border: 3px solid rgb(52, 59, 72);	
+}
+
+QLineEdit#txte_link{
+    background: #11334c;
+    color: rgb(85, 170, 255);
+    font: 75 italic 14pt Arial;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    padding-left: 10px;
+}
+
+QPushButton#btn_descargar{
+    font: 75 italic 14pt Arial;
+    border: 3px solid #11334c;
+    background: #2d96ff;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+QPushButton#btn_descargar:hover{
+    background: transparent;
+    color: #2d96ff;
+}
+
+QPushButton#btn_descargar:pressed{
+    padding-left: 10px;
+}
+
+QFrame#fr_progressBar1 {
+    border: 3px solid cyan;
+    border-radius: 15px;
+}
+
+QFrame#fr_progressBar2 {
+    background-color: qlineargradient(spread:pad, x1:0.21, y1:0, x2:1, y2:0.0284091, stop:0 rgba(0, 223, 255, 255), stop:1 rgba(47, 0, 255, 255));
+    border-radius: 15px;
+}
+
+QLabel#lbl_info {
+    font: italic 14pt Arial;
+    color: rgb(165, 255, 249);
+}
+
+QComboBox{
+    font: 75 11pt Arial;
+    background-color: #11334c;
+    border-radius: 5px;
+    border: 2px solid #223048;
+    padding: 5px;
+    padding-left: 8px;
+    color: rgb(85, 170, 255);
+}
+
+QComboBox:hover{
+    border: 2px solid rgb(64, 71, 88);
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 10px; 
+    border-left-width: 3px;
+    border-left-color: #223048;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    }
+
+QComboBox QAbstractItemView {
+    color: #a5b3ff;
+    background-color: rgb(33, 37, 43);
+    padding: 5px;
+    selection-background-color: rgb(39, 44, 54);
+}
+
+QLabel#lbl_autor{
+    font: 75 italic 14pt Arial;
+    border: 6px solid #223048;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 15px;
+    color: #a5b3ff;
+}   
+
+/** De: Francisco Velez */

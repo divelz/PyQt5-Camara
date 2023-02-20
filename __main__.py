@@ -38,6 +38,18 @@ class MainApp(windowApp):
         self.sc_moveTo_centro = atajos_(self.atajos_['moveTo_centro'])        
         self.sc_moveTo_centro.activated.connect(lambda: self.move(-6, -5))
         
+        self.sc_moveToLeft = atajos_(self.atajos_['moveToLeft'])        
+        self.sc_moveToLeft.activated.connect(lambda: self.moveTo("Left"))
+
+        self.sc_moveToRight = atajos_(self.atajos_['moveToRight'])        
+        self.sc_moveToRight.activated.connect(lambda: self.moveTo("Right"))
+
+        self.sc_moveToTop = atajos_(self.atajos_['moveToTop'])        
+        self.sc_moveToTop.activated.connect(lambda: self.moveTo("Top"))
+        
+        self.sc_moveToBottom = atajos_(self.atajos_['moveToBottom'])        
+        self.sc_moveToBottom.activated.connect(lambda: self.moveTo("Bottom"))
+        
         self.sc_minimized = atajos_(self.atajos_['minimized'])    
         self.sc_minimized.activated.connect(self.showMinimized)
         
@@ -75,29 +87,40 @@ class MainApp(windowApp):
         self.sc_VisorSecond.activated.connect(self.visorMini)
 
     def visorMini(self):
-        self.ui.fr_buttons.close()
-        self.ui.lbl_name.close()
-        self.visor = "main-2"
+        if self.visor != "main-2":
+            self.ui.fr_buttons.close()
+            self.ui.lbl_name.close()
+            self.visor = "main-2"
 
-        self.resize(384, 254)
-        self.ui.fr_fondo.setGeometry(QtCore.QRect(10, 9, 364, 234))
+            self.resize(384, 254)
+            self.ui.fr_fondo.setGeometry(QtCore.QRect(10, 9, 364, 234))
 
-        self.ui.fr_borde_left.setGeometry(QtCore.QRect(5, 5, 20, 221))
-        self.ui.fr_borde_right.setGeometry(QtCore.QRect(338, 5, 20, 225))
-        self.ui.fr_borde_top.setGeometry(QtCore.QRect(5, 5, 351, 20))
-        self.ui.fr_borde_bottom.setGeometry(QtCore.QRect(5, 210, 348, 20))
+            self.ui.fr_borde_left.setGeometry(QtCore.QRect(5, 5, 20, 221))
+            self.ui.fr_borde_right.setGeometry(QtCore.QRect(338, 5, 20, 225))
+            
+            self.ui.fr_borde_top.setGeometry(QtCore.QRect(5, 5, 351, 20))
+            self.ui.fr_borde_bottom.setGeometry(QtCore.QRect(5, 210, 348, 20))
 
-        num_x, num_y = 292, 204
-        self.ui.paginaVisor.resize(num_x, num_y)
-        self.ui.visor.resize(num_x, num_y)
-        self.ui.stackedWidget.resize(num_x, num_y)
-        self.ui.stackedWidget.move(35, 15)
+            num_x, num_y = 292, 204
+            self.ui.paginaVisor.resize(num_x, num_y)
+            self.ui.visor.resize(num_x, num_y)
+            self.ui.stackedWidget.resize(num_x, num_y)
+            self.ui.stackedWidget.move(35, 15)
 
     def indicar(self, func):
         if self.visor == "main-1":
             func()
 
         else: pass
+    
+    def moveTo(self, opc=""):
+        x = self.geometry().x()
+        y = self.geometry().y()
+
+        sx = 10 if opc == "Left" else (-10 if opc == "Right" else 0)
+        sy = -10 if opc == "Top" else (10 if opc == "Bottom" else 0)
+
+        self.move(x+sx, y+sy)
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv) 

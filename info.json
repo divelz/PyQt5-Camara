@@ -1,14 +1,19 @@
 {
     "atajos": {
         "moveTo_centro": "Ctrl+Q",
-        
+
+        "moveToLeft": "Ctrl+D",
+        "moveToRight": "Ctrl+A",
+        "moveToTop": "Ctrl+W",
+        "moveToBottom": "Ctrl+S",
+
         "minimized": "Ctrl+M",
         "cerrar": "Ctrl+C",
 
         "close_borde": "Ctrl+U",
         "show_borde": "Ctrl+I",
         
-        "mostrarImages": "Ctrl+A",
+        "mostrarImages": "Ctrl+Z",
         "ocultarImages": "Ctrl+X",
         
         "runAnimacion": "Ctrl+1",
