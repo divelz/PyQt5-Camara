@@ -1,6 +1,4 @@
-from Ui_visor import Ui_Form, QtWidgets, QtCore, QtGui
-
-#* Clase Visor (Pantalla Completa)
+from Ui_visor import Ui_Form, QtWidgets, QtCore
 
 class windowApp(QtWidgets.QMainWindow): 
 
@@ -49,7 +47,6 @@ class windowApp(QtWidgets.QMainWindow):
         self.name = self.ui.lbl_name.text().split()
 
     #  ********** ********** Animaciones ********** ********** #
-    
     def inicial_animacion(self): #* Animacion de imagenes
         if self.cont_x <= self.num_x-5: self.cont_x += 5
 

@@ -62,24 +62,12 @@ class MainApp(windowApp):
         self.sc_cerrar = atajos_(self.atajos_['cerrar'])
         self.sc_cerrar.activated.connect(self.close)
         
-        self.sc_mostrarImages = atajos_(self.atajos_['mostrarImages'])        
-        self.sc_mostrarImages.activated.connect(lambda: self.indicar(self.mostrarImages))
-        
-        self.sc_ocultarImages = atajos_(self.atajos_['ocultarImages'])
-        self.sc_ocultarImages.activated.connect(lambda: self.indicar(self.ocultarImages))
-        
         self.sc_runAnimacion = atajos_(self.atajos_['runAnimacion'])
         self.sc_runAnimacion.activated.connect(self.run_animacion)
         
         self.sc_stopAnimacion = atajos_(self.atajos_['stopAnimacion'])  
         self.sc_stopAnimacion.activated.connect(self.reiniciar_animacion)
         
-        self.sc_leftImage = atajos_(self.atajos_['leftImage'])                
-        self.sc_leftImage.activated.connect(lambda: self.indicar(self.mostrarImagen('left')) )
-            
-        self.sc_rightImage = atajos_(self.atajos_['rightImage'])
-        self.sc_rightImage.activated.connect(lambda: self.indicar( self.mostrarImagen('right')) )
-    
         self.sc_VisorM = atajos_(self.atajos_['VisorMain'])
         self.sc_VisorM.activated.connect(self.visorMain)
 

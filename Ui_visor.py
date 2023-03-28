@@ -1,4 +1,7 @@
-from PyQt5 import QtCore, QtGui, QtWidgets, QtMultimedia, QtMultimediaWidgets
+from PyQt5 import (
+    QtMultimedia, QtMultimediaWidgets,
+    QtWidgets, QtCore, QtGui 
+)
 
 class PushButtonHover(QtWidgets.QPushButton):
 
@@ -27,7 +30,7 @@ class PushButtonHover(QtWidgets.QPushButton):
 class Ui_Form(object):
     
     def __style__(self):
-        with open('style.css', 'r') as f: txt = f.read()
+        with open('style.qss', 'r') as f: txt = f.read()
         return txt
 
     def setupUi(self, Form):
@@ -116,7 +119,6 @@ class Ui_Form(object):
         self.lbl_name.setText(_translate("Form", "Francisco Velez"))
     
     def camara(self, Form): 
-        # Instancias
         num_x, num_y = 1305, 705
         self.paginaVisor = QtMultimediaWidgets.QVideoWidget()
         self.paginaVisor.resize(num_x, num_y)
@@ -124,13 +126,11 @@ class Ui_Form(object):
         self.visor = QtMultimediaWidgets.QCameraViewfinder(self.paginaVisor)
         self.visor.resize(num_x, num_y)
 
-        # QStackedWidget
         self.stackedWidget = QtWidgets.QStackedWidget(self.fr_fondo)
         self.stackedWidget.addWidget(self.paginaVisor)
         self.stackedWidget.resize(num_x, num_y)
         self.stackedWidget.move(30, 30)
 
-        # ====================== ======================
         videoDevicesGroup = QtWidgets.QActionGroup(Form)
         videoDevicesGroup.setExclusive(True)
 
@@ -148,34 +148,11 @@ class Ui_Form(object):
                 
         self.setCamara(dispositivoCamara)
 
-    def actualizarEstadoCamara(self, estado):
-        if estado == QtMultimedia.QCamera.ActiveState:
-            self.parent.accionIniciarCamara.setEnabled(False)
-            self.parent.accionDetenerCamara.setEnabled(True)
-
-            if not self.estadoFoto:
-                self.buttonTomarFoto.setEnabled(True)
-                self.buttonEliminarFoto.setEnabled(False)
-                self.buttonGuardarFoto.setEnabled(False)
-        elif estado in (QtMultimedia.QCamera.UnloadedState, QtMultimedia.QCamera.LoadedState):
-            self.parent.accionIniciarCamara.setEnabled(True)
-            self.parent.accionDetenerCamara.setEnabled(False)
-
-            if not self.estadoFoto:
-                self.buttonTomarFoto.setEnabled(False)
-                self.buttonEliminarFoto.setEnabled(False)
-                self.buttonGuardarFoto.setEnabled(False)
-
     def setCamara(self, dispositivoCamara):
-        if dispositivoCamara.isEmpty():
-            self.camara = QtMultimedia.QCamera()
-        else:
-            self.camara = QtMultimedia.QCamera(dispositivoCamara)
-
-        # self.camara.stateChanged.connect(self.actualizarEstadoCamara)
+        if dispositivoCamara.isEmpty(): self.camara = QtMultimedia.QCamera()
+        else: self.camara = QtMultimedia.QCamera(dispositivoCamara)
 
         self.capturaImagen = QtMultimedia.QCameraImageCapture(self.camara)
-
         self.camara.setViewfinder(self.visor)
         self.camara.isCaptureModeSupported(QtMultimedia.QCamera.CaptureStillImage)
 
@@ -186,8 +163,10 @@ if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     Form = QtWidgets.QWidget()
+
     ui = Ui_Form()
     ui.setupUi(Form)
+
     Form.show()
     sys.exit(app.exec_())
 
