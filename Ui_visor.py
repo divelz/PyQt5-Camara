@@ -115,7 +115,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Youtube"))
+        Form.setWindowTitle(_translate("Form", "Visor"))
         self.lbl_name.setText(_translate("Form", "Francisco Velez"))
     
     def camara(self, Form): 

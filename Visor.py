@@ -1,4 +1,4 @@
-from Ui_visor import Ui_Form, QtWidgets, QtCore
+from Ui_visor import Ui_Form, QtWidgets, QtCore, QtGui
 
 class windowApp(QtWidgets.QMainWindow): 
 
